@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  font-size: 62.5%;
+  --ff-primary: 'Poppins', sans-serif;
+  --text-color: #303030;
+
+  --hue: 194;
+  --primary-color: hsl(var(--hue), 100%, 63%);
+}
+body{
+  font-size: 1.6rem;
+  background-color: #000;
+}
+body *{
+  font-family: var(--ff-primary);
+  color: var(--text-color);
+}
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+#app{
+  padding: 2rem;
+  max-width: 112rem;
+  margin: 0 auto;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2.5rem 0;
+  gap: 1rem;
+}
+
+header h1{
+  font-size: 2rem;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  width: 64rem;
+  gap: .8rem;
+}
+.search input{
+  width: 75%;
+  border: 1px solid #ccc;
+  border-radius: .4rem;
+  padding: 1.6rem;
+}
+.search button{
+  background-color: #065E7C;
+  color: #fff;
+  border-radius: .4rem;
+  min-width: 25%;
+  padding: 1.6rem;
+  
+  font-size: 1.4rem;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+
+  border: none;
+  cursor: pointer;
+
+  transition: all .2s ease;
+}
+.search button:hover, .search button:hover path{
+  background-color: #ffffff;
+  color: #065E7C;
+  fill: #065E7C;
+}
+
+#bordered{
+  border: 1px solid #86E9FF;
+  border-radius: .5rem;
+}
+table{
+  width: 100%;
+  box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.3);
+  border-collapse: collapse;
+}
+table * {
+  font-size: 1.4rem;
+  color: #E1E1E6;
+}
+table th{
+  background-color: #092D38;
+  text-align: left;
+  font-weight: normal;
+  padding: 1.5rem;
+
+}
+table th:first-child{
+  border-top-left-radius: .4rem;
+}
+table th:last-child{
+  border-top-right-radius: .4rem;
+}
+table tr:nth-child(even){
+  background-color: #06181C;
+}
+table tr:nth-child(odd){
+  background-color: rgba(6, 21, 25, 0.5);
+}
+table tr{
+  border-bottom: 1px solid #86e9ff85;
+}
+table td{
+  padding: 1.5rem;
+  text-align: left;
+}
+/* td com a classe */
+td.user{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+td.user img{
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+td.user a{
+  text-decoration: none;
+}
+td.user a p{
+  font-weight: bold;
+}
+/* td que possua um elemento com a classe */
+td .remove{
+  background-color: transparent;
+  border: none;
+  color: #F75A68;
+  cursor: pointer;
+}
+#noFav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65vh;
+  font-size: 4rem;
+  font-weight: bold;
+  gap: 6rem;
+}
+#noFav img{
+  width: 13.2rem;
+}
